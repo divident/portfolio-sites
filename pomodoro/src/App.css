@@ -1,0 +1,301 @@
+.main {
+  flex-flow: column;
+  align-items: center;
+  gap: var(--gap, 3rem);
+}
+
+.progress {
+  position: relative;
+  box-shadow: -41px -25px 36px -6px #424968;
+}
+
+.timer {
+  position: absolute;
+  top: 50px;
+  left: 90px;
+  width: 170px;
+}
+
+.timer-list {
+  list-style: none;
+  display: flex;
+  padding: 0.5em;
+  border-radius: 20px;
+  gap: 0.5rem;
+  background-color: var(--bg-secondary);
+}
+
+.timer-item {
+  padding: 0.5em 1em;
+  cursor: pointer;
+}
+
+.timer-item.active {
+  background-color: var(--bg-active);
+  border-radius: 20px;
+  color: var(--text-secondary);
+}
+
+.progress {
+  background-color: var(--bg-secondary);
+  border-radius: 50%;
+}
+
+.btn-stop {
+  display: block;
+  margin: auto;
+  border: none;
+  background-color: var(--bg-secondary);
+  color: var(--text-secondary);
+  letter-spacing: 0.2em;
+  font-size: 2.5rem;
+  margin-top: -0.5em;
+  font-weight: 800;
+}
+
+
+.rotate:hover {
+  animation: rotation 2s infinite linear;
+  transform-origin: center;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+
+
+.flex {
+  display: flex;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-evenly {
+  justify-content: space-evenly;
+}
+
+.block {
+  display: block;
+}
+
+.dot {
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+  margin: 0 0.5em;
+  text-align: center;
+  line-height: 3em;
+  cursor: pointer;
+}
+
+div.dot-selected {
+  background-color: black;
+  color: white;
+}
+
+.bg-pink {
+  background-color: var(--bg-pink);
+  color: black;
+  font-weight: 700;
+}
+
+.bg-red {
+  background-color: var(--bg-red);
+  color: black;
+  font-weight: 700;
+}
+
+.bg-aqua {
+  background-color: var(--bg-aqua);
+  color: black;
+  font-weight: 700;
+}
+
+.bg-grey {
+  background-color: var(--bg-grey);
+  color: #7d7d7d;
+}
+
+.text-xl {
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.spacing-md {
+  letter-spacing: 0.5em;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.color-black {
+  color: black;
+}
+
+select {
+  /* Reset Select */
+  appearance: none;
+  outline: 0;
+  border: 0;
+  box-shadow: none;
+  /* Personalize */
+  flex: 1;
+  padding: 0 1em;
+  color: #fff;
+  background-color: var(--darkgray);
+  background-image: none;
+  cursor: pointer;
+}
+
+/* Remove IE arrow */
+select::-ms-expand {
+  display: none;
+}
+
+/* Custom Select wrapper */
+
+
+.custom-label {
+  position: relative;
+  color: #c4c7ce;
+  margin-bottom: 0.5em;
+  font-weight: 600;
+}
+
+/* Arrow */
+.custom-label::after {
+  content: '<';
+  font-weight: 600;
+  transform: rotate(90deg) scaleY(1.5);
+  z-index: 99999;
+  color: #c4c7ce;
+  position: absolute;
+  top: 30px;
+  right: 10px;
+  font-family: "Arial, sans-serif";
+}
+
+.custom-label::before {
+  content: '<';
+  font-weight: 600;
+  transform: rotate(270deg) scaleY(1.5);
+  z-index: 99999;
+  color: #c4c7ce;
+  position: absolute;
+  top: 45px;
+  right: 12px;
+  font-family: "Arial, sans-serif";
+}
+
+.custom-label::after:hover {
+  color: black;
+}
+
+
+/* Transition */
+.custom-select:hover::after {
+  color: #f39c12;
+}
+
+.divider {
+  width: 100%;
+  border-bottom: 2px solid #c4c7ce;
+  margin: 1.5em 0;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.exit {
+  color: #7d7d7d;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+
+.btn-apply:hover {
+  filter: brightness(90%);
+}
+
+
+.select-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.setting {
+  border-radius: 5%;
+  width: 300px;
+  min-height: 450px;
+  background-color: white;
+  z-index: 99999;
+  position: absolute;
+  left: calc(50% - 150px);
+  top: 50px;
+  padding: 20px;
+}
+
+
+.btn-apply {
+  width: 100px;
+  height: 40px;
+  background-color: var(--bg-active);
+  border-radius: 10% / 50%;
+  color: white;
+  border: none;
+  position: relative;
+  left: 100px;
+  bottom: -30px;
+  font-size: 1.1em;
+}
+
+
+.custom-select {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 3em;
+  border-radius: .25em;
+  overflow: hidden;
+  color: black;
+  font-weight: 600;
+  background-color: var(--bg-grey);
+}
+
+@media (min-width: 768px) {
+  .select-panel {
+    flex-direction: row;
+  }
+
+  .setting {
+    width: 500px;
+    left: calc(50% - 250px);
+    top: calc(50% - 225px);
+
+  }
+
+  .btn-apply {
+    left: 50px;
+    left: 215px;
+  }
+
+  .custom-select {
+    width: 10em;
+  }
+}

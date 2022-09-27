@@ -1,0 +1,5 @@
+.timer-digit {
+    font-size: 4rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
